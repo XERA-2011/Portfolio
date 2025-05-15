@@ -52,23 +52,23 @@ const SocketContextProvider = ({ children }: { children: ReactNode }) => {
   const [msgs, setMsgs] = useState<Message[]>([]);
 
   // SETUP SOCKET.IO
-  useEffect(() => {
-    const username =  localStorage.getItem("username") || generateRandomCursor().name
-    const socket = io(process.env.NEXT_PUBLIC_WS_URL!, {
-      query: { username },
-    });
-    setSocket(socket);
-    socket.on("connect", () => {});
-    socket.on("msgs-receive-init", (msgs) => {
-      setMsgs(msgs);
-    });
-    socket.on("msg-receive", (msgs) => {
-      setMsgs((p) => [...p, msgs]);
-    });
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
+//   useEffect(() => {
+//     const username =  localStorage.getItem("username") || generateRandomCursor().name
+//     const socket = io(process.env.NEXT_PUBLIC_WS_URL!, {
+//       query: { username },
+//     });
+//     setSocket(socket);
+//     socket.on("connect", () => {});
+//     socket.on("msgs-receive-init", (msgs) => {
+//       setMsgs(msgs);
+//     });
+//     socket.on("msg-receive", (msgs) => {
+//       setMsgs((p) => [...p, msgs]);
+//     });
+//     return () => {
+//       socket.disconnect();
+//     };
+//   }, []);
 
   return (
     <SocketContext.Provider value={{ socket: socket, users, setUsers, msgs }}>

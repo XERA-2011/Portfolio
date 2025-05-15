@@ -45,7 +45,7 @@ const HeroSection = () => {
                 <BlurIn delay={1}>
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
-                      <h1
+                      <div
                         className={cn(
                           "font-thin text-6xl text-transparent text-slate-800 ml-1 text-left",
                           "cursor-default text-edge-outline font-display sm:text-7xl md:text-9xl "
@@ -58,7 +58,7 @@ const HeroSection = () => {
 
                         <br className="md:block hiidden" />
                         UNMUTE ME 😢😢 */}
-                      </h1>
+                      </div>
                     </TooltipTrigger>
                     <TooltipContent
                       side="top"
@@ -82,9 +82,7 @@ const HeroSection = () => {
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
-                  href={
-                    "https://drive.google.com/file/d/1O97WCk2DrO9x6SHOqf7LvRbmHkMgGIb4/view?usp=sharing"
-                  }
+                  href={"https://github.com/XERA-2011"}
                   target="_blank"
                   className="flex-1"
                 >
