@@ -10,7 +10,6 @@ const nextConfig = {
   swcMinify: true,
 
   trailingSlash: true,
-  basePath: '/Portfolio',
 };
 
 export default nextConfig;
