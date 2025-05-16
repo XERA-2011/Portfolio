@@ -8,6 +8,9 @@ const nextConfig = {
   // 可选：开启严格模式、SWC 压缩等
   reactStrictMode: true,
   swcMinify: true,
+
+  trailingSlash: true,
+  basePath: '/Portfolio',
 };
 
 export default nextConfig;
